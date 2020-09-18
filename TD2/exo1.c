@@ -4,13 +4,23 @@
 //Declarations
 int maVariableGlobale = 0;
 void test();
+void permuter(int *adr_i, int *adr_j);
+int length(char* chaine);
+void tableau1();
+int strcomp(char* chaine1,char* chaine2);
+void strcpy(char* dest,char* src);
 //Implementation
 int main(){
 	//test();
 	int v1=2;
 	int v2=10;
-	permuter(&v1,&v2);
+	//permuter(&v1,&v2);
+	//tableau1();
+	int a=length("Bonjour");
+	printf("%i \n",a);
 
+	
+	printf("%i \n",strcomp("Bonjourdf","Bonjour"));
 	}
 
 void test(){
@@ -33,8 +43,53 @@ void permuter(int *adr_i, int *adr_j){
  	*adr_i = *adr_j;
  	*adr_j = a;
 
-	printf(" %ld, %ld \n",*adr_i,*adr_j) ;
+	printf(" %d, %d \n",*adr_i,*adr_j) ;
 }
+
+void tableau1(){
+	int tab[10] ; // un tableau de 10 cases de int
+	int *adr_i ; // declarer une variable qui contient une @ d'un int.
+	adr_i = tab ; //tab contient l'adresse de la premiere variable de la sequence.
+
+	printf(" %p \n",adr_i) ; // affiche l'adresse
+}
+
+int length(char* chaine){
+	int i=0;
+	while(chaine[i]!='\0'){
+		i++;
+	}
+	return i;
+}
+int strcomp(char* chaine1,char* chaine2){
+	int a=length(chaine1);
+	int b=length(chaine2);
+	int c=1;
+	int i=0;
+
+	if (a!=b){
+		c=0;
+	}
+	while(chaine1[i]<a && chaine2[i]<b && c==1){
+		if(chaine1[i]==chaine2[i]){
+			c=1;
+
+		}
+		else{
+			c=0;
+		}
+				
+		i++;
+	}
+	return c;
+
+	
+}
+
+int void strcpy(char* dest,char* src){
+	
+}
+
 
 /* 
  Globale: 0x55b586329014 
