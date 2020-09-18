@@ -21,6 +21,9 @@ int main(){
 
 	
 	printf("%i \n",strcomp("Bonjourdf","Bonjour"));
+	/* char* maloc;
+	maloc=malloc(length(src)*sizeof(char));*/
+
 	}
 
 void test(){
@@ -87,8 +90,27 @@ int strcomp(char* chaine1,char* chaine2){
 }
 
 int void strcpy(char* dest,char* src){
+	int a=length(chaine1);
+	int b=length(chaine2);
+	int c=1;
+	int i=0;
+
+	while(chaine1[i]<a && chaine2[i]<b && c==1){
+		if(chaine1[i]==chaine2[i]){
+			c=1;
+
+		}
+		else{
+			c=0;
+		}
+				
+		i++;
+	}
+	return c;
+
 	
 }
+
 
 
 /* 
