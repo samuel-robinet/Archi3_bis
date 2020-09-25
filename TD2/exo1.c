@@ -8,7 +8,7 @@ void permuter(int *adr_i, int *adr_j);
 int length(char* chaine);
 void tableau1();
 int strcomp(char* chaine1,char* chaine2);
-void strcpy(char* dest,char* src);
+void strcpy1(char* dest,char* src);
 //Implementation
 int main(){
 	//test();
@@ -21,6 +21,12 @@ int main(){
 
 	
 	printf("%i \n",strcomp("Bonjourdf","Bonjour"));
+
+	char* src= "bonjour";
+    char* memoireAllouee = NULL; // On crée un pointeur sur int
+    memoireAllouee = malloc(sizeof(src)); // La fonction malloc inscrit dans notre pointeur l'adresse qui a été reservée.
+    strcpy1(src,memoireAllouee);
+    printf(memoireAllouee);
 	/* char* maloc;
 	maloc=malloc(length(src)*sizeof(char));*/
 
@@ -89,26 +95,16 @@ int strcomp(char* chaine1,char* chaine2){
 	
 }
 
-int void strcpy(char* dest,char* src){
-	int a=length(chaine1);
-	int b=length(chaine2);
-	int c=1;
-	int i=0;
 
-	while(chaine1[i]<a && chaine2[i]<b && c==1){
-		if(chaine1[i]==chaine2[i]){
-			c=1;
+void strcpy1(char* dest,char* src) {
 
-		}
-		else{
-			c=0;
-		}
-				
-		i++;
-	}
-	return c;
+    int i = 0;
 
-	
+    while (dest[i] != '\0') {
+        src[i]=dest[i];
+        i++;
+
+    }
 }
 
 
