@@ -1,0 +1,11 @@
+1 Premier exemple de longjmp et setjmp :
+
+	Ce que fait le code :
+
+	0 argument : -> switch() -> case 0 -> f1() -> if() -> switch() -> case 1
+	1 argument : -> switch() -> case 0 -> f1() -> f2() -> switch() -> case 2
+	2 arguments : -> switch() -> case 0 -> f1() -> f2() -> switch() -> case 2
+	+2 arguments : -> switch() -> case 0 -> f1() -> f2() -> switch() -> case 2
+
+
+2 Droit au but !
