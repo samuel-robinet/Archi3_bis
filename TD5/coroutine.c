@@ -3,12 +3,13 @@
 #include  <setjmp.h>
 
 int       max_tour;
-int       compteurPing;    
-//??
+int       compteurPing=1;
+int       compteurPong=1;
+
 
 jmp_buf   ancreMain;
 jmp_buf   ancrePing;
-//??
+jmp_buf   ancrePong;
 
 void      Ping(void);
 void      Pong(void);

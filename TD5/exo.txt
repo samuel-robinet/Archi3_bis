@@ -1,4 +1,4 @@
-1 Premier exemple de longjmp et setjmp :
+1 Premier exemple de longjmp et setjmp !
 
 	Ce que fait le code :
 
@@ -9,3 +9,12 @@
 
 
 2 Droit au but !
+
+    Terminé // Utiliser longjmp et setjmp rend le code plus rapide
+
+3 Les co-routines !
+
+    Passage de controle entre ping et pong
+    trois tampon : main ping pong
+
+    En cours
