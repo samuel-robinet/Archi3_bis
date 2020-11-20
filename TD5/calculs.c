@@ -17,25 +17,24 @@ int calculs(int i, int j, int k){
 int main(int argc, char** argv) {
     int val1, val2, val3;
     int res;
-    while(1){
-        printf("Saisir 3 valeurs :\n");
-        scanf("%d %d %d", &val1, &val2, &val3);
-        printf("Les valeurs sont : %d, %d, %d\n", val1, val2, val3);
 
-        switch(setjmp(env)){  //Encrage
-            case 0 : //..
-                res = calculs(val1, val2, val3);
-                printf("Resultat calcul :  %d\n", res);
-                break;
-            case 1 : // retour
-                printf("Valeur zéro parmi les 3 valeurs \n");
-                break;
-            case 2 : //retour
-                printf("Problème triangulaire entre les 3 valeurs \n");
-                break;
-            case 3 : //retour
-                printf("Problème ecart entre les 3 valeurs \n");
-                break;
-        }
+    printf("Saisir 3 valeurs :\n");
+    scanf("%d %d %d", &val1, &val2, &val3);
+    printf("Les valeurs sont : %d, %d, %d\n", val1, val2, val3);
+
+    switch(setjmp(env)){  //Encrage
+        case 0 : //..
+            res = calculs(val1, val2, val3);
+            printf("Resultat calcul :  %d\n", res);
+            break;
+        case 1 : // retour
+            printf("Valeur zéro parmi les 3 valeurs \n");
+            break;
+        case 2 : //retour
+            printf("Problème triangulaire entre les 3 valeurs \n");
+            break;
+        case 3 : //retour
+            printf("Problème ecart entre les 3 valeurs \n");
+            break;
     }
 }
