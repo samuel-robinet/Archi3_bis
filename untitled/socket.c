@@ -7,6 +7,8 @@
 #include <sys/types.h>
 #include <strings.h>
 #include <unistd.h>
+#include <winsock2.h>
+
 #define PORT 12345
 int sock, socket2, lg;
 char mess[80];
@@ -22,7 +24,7 @@ void creer_socket()
     bzero(&(local.sin_zero),8); // fin de remplissage
     lg = sizeof(struct sockaddr_in);
     sock=socket(AF_INET, SOCK_STREAM, 0); // creation socket du serveur mode TCP/IP
-    bind(sock, (SOCKADDR*)&lg, sizeof(lg)); // nommage de la socket
+    bind(sock, (SOCKADDR*)&local, sizeof(lg)); // nommage de la socket
 }
 main()
 {
@@ -37,8 +39,8 @@ main()
     { // attente connexion client
         printf ("En attente d un client\n");
 
-        taille = sizeof(struct sockaddr_in);
-        socket2 = accept(sock, (SOCKADDR*)&csin, &taille);
+        int taille = sizeof(struct sockaddr_in);
+        socket2 = accept(sock, (SOCKADDR*)&distant, &taille);
 
         printf ("client connecte \n");
         strcpy(mess,"");
