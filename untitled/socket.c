@@ -7,7 +7,7 @@
 #include <sys/types.h>
 #include <strings.h>
 #include <unistd.h>
-#include <winsock2.h>
+//#include <winsock2.h>
 
 #define PORT 12345
 int sock, socket2, lg;
