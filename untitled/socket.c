@@ -8,7 +8,8 @@
 #include <strings.h>
 #include <unistd.h>
 #include <rpc.h>
-//#include <winsock2.h>
+#include <strings.h>
+
 
 #define PORT 12345
 int sock, socket2, lg;
