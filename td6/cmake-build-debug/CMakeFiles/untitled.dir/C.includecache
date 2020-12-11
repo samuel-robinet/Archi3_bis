@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/file/Iut/2 annee bis/C/Archi3_bis/untitled/socket.c
+stdio.h
+-
+stdlib.h
+-
+errno.h
+-
+string.h
+-
+netinet/in.h
+-
+sys/socket.h
+-
+sys/types.h
+-
+strings.h
+-
+unistd.h
+-
+
